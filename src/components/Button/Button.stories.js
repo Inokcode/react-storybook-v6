@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+// import Center from '../Center/Center';
 
 //components story format
 //Have default export one or more named export
@@ -10,10 +11,16 @@ export default {
   args: {
     children: 'Button',
   },
+  // decorators: [(story) => <Center>{story()}</Center>],
 };
 
 //Name export
 //represent a story
+// export const Primary = () => (
+//   <Center>
+//     <Button variant="primary">Primary</Button>
+//   </Center>
+// );
 export const Primary = () => <Button variant="primary">Primary</Button>;
 export const Secondary = () => <Button variant="secondary">Secondary</Button>;
 export const Success = () => <Button variant="success">Success</Button>;
