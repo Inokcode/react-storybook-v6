@@ -1,8 +1,17 @@
 import React from 'react';
 import { addDecorator } from '@storybook/react';
-import Center from '../src/components/Center/Center';
+// import Center from '../src/components/Center/Center';
+import { ChakraProvider } from '@chakra-ui/react';
+import theme from '@chakra-ui/theme';
 
-addDecorator((story) => <Center>{story()}</Center>);
+// addDecorator((story) => <Center>{story()}</Center>);
+export const decorators = [
+  (Story) => (
+    <ChakraProvider theme={theme}>
+      <Story />
+    </ChakraProvider>
+  ),
+];
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

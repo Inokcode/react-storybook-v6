@@ -10,6 +10,7 @@ export default {
   component: Button,
   args: {
     children: 'Button',
+    onclick: { action: 'clicked' },
   },
   // decorators: [(story) => <Center>{story()}</Center>],
 };
